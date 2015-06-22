@@ -4,7 +4,7 @@
 
 Android平台操作Sqlite的轻量级ORM库，部分代码来自GreenDAO，API同步实现Sqlite的基本API，追求使用极少的配置，面向对象操作数据库的CRUD操作;
 
-AisenForORM专门做数据的静态缓存，以及sum、count等DB操作，目前我只使用到了这些API方法，至于扩展，如果熟悉基本的sql和sqilte的特性，参照源码，我相信你实现起来也很方便的，总共代码就一点点。Aisen微博所有的数据缓存都使用该库;性能和使用请参照Aisen微博的代码。
+AisenForORM专门做数据的静态缓存，以及sum、count等DB操作，Aisen微博所有的数据缓存都使用该库;性能和使用请参照Aisen微博的代码。
 
 ## 功能
 
