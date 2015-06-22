@@ -12,11 +12,10 @@ public class MyApplication extends Application {
 	public void onCreate() {
 		super.onCreate();
 		
-		new SqliteUtilityBuilder()
-					.configSdcardPath(Environment.getExternalStorageDirectory().getAbsolutePath() + File.separator + "sqliteutility" + File.separator)
-//					.configDBName("sdcard_1")
-					.configVersion(1)
-					.build(this);
+//		new SqliteUtilityBuilder()
+//					.configSdcardPath(Environment.getExternalStorageDirectory().getAbsolutePath() + File.separator + "sqliteutility" + File.separator)
+//					.configVersion(1)
+//					.build(this);
 	};
 
 }

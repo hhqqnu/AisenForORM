@@ -14,13 +14,13 @@ public class SqliteUtilityBuilder {
 	
 	public static final String TAG = SqliteUtility.TAG;
 	
-	static final String DEFAULT_DB = "com_m_default_db";
+	static final String DEFAULT_DB = "com_m_default_db";// 默认DB名称
 	
-	private String path;
+	private String path;// DB的SD卡路径
 
 	private String dbName = DEFAULT_DB;
 	
-	private int version = 1;
+	private int version = 1;// DB的Version，每次升级DB都默认先清库
 	
 	private boolean sdcardDb = false;
 	

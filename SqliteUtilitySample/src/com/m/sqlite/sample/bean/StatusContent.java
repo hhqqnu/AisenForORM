@@ -1,6 +1,8 @@
-package com.m.sqlite.sample;
+package com.m.sqlite.sample.bean;
 
 import com.m.support.sqlite.annotation.PrimaryKey;
+
+
 
 
 import java.io.Serializable;

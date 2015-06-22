@@ -13,11 +13,18 @@
     <!-- 往SDCard写入数据权限 -->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
+    <!--加载被测主程序包名 -->
+    <instrumentation android:name="android.test.InstrumentationTestRunner" android:targetPackage="com.m.sqlite.sample"/>
+    
     <application android:name="com.m.sqlite.sample.MyApplication"
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
+        
+        <!--需要加载测试扩展包 -->
+        <uses-library android:name="android.test.runner"/>
+        
         <activity android:name="com.m.sqlite.sample.SampleActivity" 
             >
             <intent-filter>

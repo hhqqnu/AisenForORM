@@ -149,6 +149,12 @@ public class SqliteUtility {
 
     /*******************************************开始Insert系列方法****************************************************/
 
+    /**
+     * 如果主键实体已经存在，则忽略插库
+     * 
+     * @param extra
+     * @param entities
+     */
 	public <T> void insert(Extra extra, T... entities) {
         try {
             if (entities != null && entities.length > 0)
@@ -160,6 +166,12 @@ public class SqliteUtility {
         }
     }
 
+	/**
+	 * 如果主键实体已经存在，使用新的对象存库
+	 * 
+	 * @param extra
+	 * @param entities
+	 */
     public <T> void insertOrReplace(Extra extra, T... entities) {
         try {
             if (entities != null && entities.length > 0)

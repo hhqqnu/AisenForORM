@@ -1,4 +1,4 @@
-package com.m.sqlite.sample;
+package com.m.sqlite.sample.bean;
 
 import java.io.Serializable;
 

@@ -6,6 +6,10 @@ import android.os.Bundle;
 import android.util.Log;
 
 import com.alibaba.fastjson.JSON;
+import com.m.sqlite.sample.bean.StatusContent;
+import com.m.sqlite.sample.bean.StatusContents;
+import com.m.sqlite.sample.bean.TestBean;
+import com.m.sqlite.sample.bean.WeiBoUser;
 import com.m.support.sqlite.SqliteUtility;
 import com.m.support.sqlite.extra.Extra;
 
