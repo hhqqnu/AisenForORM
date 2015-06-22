@@ -2,26 +2,27 @@
 
 ## 说明
 
-Android平台操作Sqlite的轻量级ORM库，部分代码来自GreenDAO，API参照实现Sqlite的基本API，追求使用极少的配置，面向对象操作数据库的CRUD操作;
+Android平台操作Sqlite的轻量级ORM库，部分代码来自GreenDAO，API同步实现Sqlite的基本API，追求使用极少的配置，面向对象操作数据库的CRUD操作;
 
-SqliteUtility适合做数据的静态缓存，以及简单的排序、统计等DB操作，Aisen微博所有的数据缓存都使用该库;
+AisenForORM专门做数据的静态缓存，以及sum、count等DB操作，目前我只使用到了这些API方法，至于扩展，如果熟悉基本的sql和sqilte的特性，参照源码，我相信你实现起来也很方便的，总共代码就一点点。Aisen微博所有的数据缓存都使用该库;性能和使用请参照Aisen微博的代码。
 
 ## 功能
 
- * 支持程序内部、SD卡建库
+ * 支持/data/data/packagename/databases/、/sdcard/路径建库
  * 支持通过DBName同时操作多个数据库
- * 支持Object对象的字段扩展自动新增Table的数据库字段（删除字段不支持，Sqlite不支持Table的动态column删除操作）
- * API参照Sqlite的基本API，零学习成本
+ * 支持Tabel自动维护（只支持Object的新增字段维护）
  * 支持自增主键的配置
- * Table支持多账户
+ * Table支持多账户，key等扩展字段的配置
 
-## 
+## 扩展字段
 
 每个Object默认有3个组合主键（@AutoIncrementPrimaryKey除外，它只有一个）
 1、@PrimaryKey配置的字段；
 2、com_m_common_key字段
 3、com_m_common_owner字段
+
 每个Object有一个默认字段，标志该数据的最后更新时间
+
 com_m_common_createat
 
 ## 初始化数据库
