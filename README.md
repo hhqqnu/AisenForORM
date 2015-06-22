@@ -2,7 +2,7 @@
 
 ## 说明
 
-Android平台操作Sqlite的轻量级ORM库，部分代码来自GreenDAO，API参照实现Sqlite的基本API，追求使用极少的配置，面向对象操作数据库的ORUD操作;
+Android平台操作Sqlite的轻量级ORM库，部分代码来自GreenDAO，API参照实现Sqlite的基本API，追求使用极少的配置，面向对象操作数据库的CRUD操作;
 
 SqliteUtility适合做数据的静态缓存，以及简单的排序、统计等DB操作，Aisen微博所有的数据缓存都使用该库;
 
