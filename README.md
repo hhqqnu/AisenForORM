@@ -17,13 +17,14 @@ AisenForORM专门做数据的静态缓存，以及sum、count等DB操作，目�
 ## 扩展字段
 
 每个Object默认有3个组合主键（@AutoIncrementPrimaryKey除外，它只有一个）
-1、@PrimaryKey配置的字段；
-2、com_m_common_key字段
-3、com_m_common_owner字段
+
+ * @PrimaryKey配置的字段；
+ * com_m_common_key字段
+ * com_m_common_owner字段
 
 每个Object有一个默认字段，标志该数据的最后更新时间
 
-com_m_common_createat
+ * com_m_common_createat
 
 ## 初始化数据库
 
@@ -39,7 +40,19 @@ com_m_common_createat
 
 ## 简单的配置
 
-使用注解配置实体的主键字段，必须配置，否则将crash
+必须配置实体的主键字段，否则将crash，可选配置表名
+```java
+// 配置表名（可选）
+@TableName(table = "StatusContent")
+public class StatusContent implements Serializable {
+...
+}
+
+// 必须配置
+@PrimaryKey(column = "id")
+private long id;
+
+```
 
 
 
