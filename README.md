@@ -1,6 +1,6 @@
 # AisenForORM
 
-Android平台Sqlite数据库的ORM库，API同步Sqlite的API，追求使用极少的配置实现面向对象的CRUD操作;
+Android平台Sqlite数据库的ORM库，追求使用极少的配置实现面向对象的CRUD操作;
 
 专门用做数据的静态缓存，以及sum、count等DB操作，Aisen微博所有的数据缓存都使用该库;性能和使用请参照Aisen微博的代码。
 
@@ -54,8 +54,6 @@ public class StatusContent implements Serializable {
 private long id;
 
 ```
-
-
 
 ## API
 
