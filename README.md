@@ -1,16 +1,14 @@
 # AisenForORM
 
-## 说明
+Android平台Sqlite数据库的ORM库，API同步Sqlite的API，追求使用极少的配置实现面向对象的CRUD操作;
 
-Android平台操作Sqlite的轻量级ORM库，部分代码来自GreenDAO，API同步实现Sqlite的基本API，追求使用极少的配置，面向对象操作数据库的CRUD操作;
-
-AisenForORM专门做数据的静态缓存，以及sum、count等DB操作，Aisen微博所有的数据缓存都使用该库;性能和使用请参照Aisen微博的代码。
+专门用做数据的静态缓存，以及sum、count等DB操作，Aisen微博所有的数据缓存都使用该库;性能和使用请参照Aisen微博的代码。
 
 ## 功能
 
  * 支持/data/data/packagename/databases/、/sdcard/路径建库
- * 支持通过DBName同时操作多个数据库
- * 支持Tabel自动维护（只支持Object的新增字段维护）
+ * 支持操作多个数据库
+ * Object和Tabel映射的自动维护（只支持Object的新增字段）
  * 支持自增主键的配置
  * Table支持多账户，key等扩展字段的配置
 
@@ -22,9 +20,13 @@ AisenForORM专门做数据的静态缓存，以及sum、count等DB操作，Aisen
  * com_m_common_key字段
  * com_m_common_owner字段
 
-每个Object有一个默认字段，标志该数据的最后更新时间
+>com_m_common_owner是标志数据的所有者，com_m_common_key是标志数据的类型。
+
+每个Object有一个更新时间的字段
 
  * com_m_common_createat
+
+>标志数据的最后更新时间
 
 ## 初始化数据库
 
