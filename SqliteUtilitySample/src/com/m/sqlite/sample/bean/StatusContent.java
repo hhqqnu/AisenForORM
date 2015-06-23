@@ -5,13 +5,22 @@ import com.m.support.sqlite.annotation.PrimaryKey;
 
 
 
+import com.m.support.sqlite.annotation.TableName;
+
 import java.io.Serializable;
 import java.util.Date;
 
+@TableName(table = "StatusContent")
 public class StatusContent implements Serializable {
 
     private static final long serialVersionUID = 4658890626870999594L;
 
+    /**
+     * 微博ID
+     */
+    @PrimaryKey(column = "id")
+    private long id;
+    
     /**
      * 创建时间
      */
@@ -22,12 +31,6 @@ public class StatusContent implements Serializable {
      */
     // {"type":"Point","coordinates":[22.5423681,113.9522767]}
     private Geo geo;
-
-    /**
-     * 微博ID
-     */
-    @PrimaryKey(column = "id")
-    private long id;
 
     /**
      * 微博信息内容

@@ -48,7 +48,7 @@ public class SqlUtils {
         strSQL.append(" ").append(FieldUtils.CREATEAT).append(" INTEGER NOT NULL ");
 
         // 自动增加的主键，只有id一个
-        if (primaryKey instanceof  AutoIncrementTableColumn) {
+        if (primaryKey instanceof AutoIncrementTableColumn) {
         }
         else {
             strSQL.append(", PRIMARY KEY ( ").append(primaryKey.getColumn()).append(" , ")

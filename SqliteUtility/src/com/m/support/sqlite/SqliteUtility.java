@@ -346,9 +346,19 @@ public class SqliteUtility {
     public long sum(Class<?> clazz, String column, String whereClause, String[] whereArgs) {
         TableInfo tableInfo = checkTable(clazz);
 
-        String sql = String.format(" select sum(%s) as _sum_ from %s where %s ", column, tableInfo.getTableName(), whereClause);
+        if (TextUtils.isEmpty(column))
+        	return 0;
+        
+        String sql = null;
+        if (TextUtils.isEmpty(whereClause)) {
+        	whereArgs = null;
+        	sql = String.format(" select sum(%s) as _sum_ from %s ", column, tableInfo.getTableName());
+        }
+        else {
+        	sql = String.format(" select sum(%s) as _sum_ from %s where %s ", column, tableInfo.getTableName(), whereClause);
+        }
 
-        DBLogger.d(TAG, "sum --- > " + sql);
+        DBLogger.d(TAG, "sum() --- > " + sql);
         DBLogger.d(TAG, whereArgs);
 
         try {
@@ -369,7 +379,14 @@ public class SqliteUtility {
     public long count(Class<?> clazz, String whereClause, String[] whereArgs) {
         TableInfo tableInfo = checkTable(clazz);
 
-        String sql = String.format(" select count(*) as _count_ from %s where %s ", tableInfo.getTableName(), whereClause);
+        String sql = null;
+        if (TextUtils.isEmpty(whereClause)) {
+        	whereArgs = null;
+        	sql = String.format(" select count(*) as _count_ from %s ", tableInfo.getTableName());
+        }
+        else {
+        	sql = String.format(" select count(*) as _count_ from %s where %s ", tableInfo.getTableName(), whereClause);
+        }
 
         DBLogger.d(TAG, "count --- > " + sql);
         DBLogger.d(TAG, whereArgs);
