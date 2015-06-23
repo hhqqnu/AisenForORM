@@ -59,30 +59,7 @@ private long id;
 
 ## API
 
- * Insert方法
- 
-  * insert(Extra extra, T... entities)
-
->根据一个数组存库，如果某实体已存在，则忽略该实体的存库
-
-  * insertOrReplace(Extra extra, T... entities)
-
->根据一个数组存库，如果某实体已存在，则使用新的实体更新DB数据
-
-  * insert(Extra extra, List<T> entityList)
-
-  * insertOrReplace(Extra extra, List<T> entityList)
-
- * insert(Extra extra, T... entities)
-
- * insert(Extra extra, T... entities)
-
- * insert(Extra extra, T... entities)
-
- * insert(Extra extra, T... entities)
-
- * insert(Extra extra, T... entities)
-   
+ 参照测试用例的API测试方法，[点这里](./SqliteUtilitySample/src/com/m/sqlite/sample/SqliteUtilityTestCase.java)
 
 
 ## License
