@@ -33,7 +33,7 @@ Android平台Sqlite数据库的ORM库，追求使用极少的配置实现面向�
 ```java
 	new SqliteUtilityBuilder()
 		// 如果是SD卡的DB，配置SD卡路径	
-		// 如果不配置这个方法，DB默认在/data/data/packagename/路径下
+		// 如果不配置这个方法，DB默认在/data/data/packagename/databases/路径下
 		.configSdcardPath(Environment.getExternalStorageDirectory().getAbsolutePath() + File.separator + "sqliteutility" + File.separator)
 		// 配置DB的版本号，如果高于历史版本号，数据库升级默认是Drop所有的Table
 		.configVersion(1)
