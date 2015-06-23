@@ -42,15 +42,14 @@ Android平台Sqlite数据库的ORM库，API同步Sqlite的API，追求使用极�
 
 ## 简单的配置
 
-必须配置实体的主键字段，否则将crash，可选配置表名
 ```java
-// 配置表名（可选）
+// 配置表名（可选，不配置表名默认是Class的全路径）
 @TableName(table = "StatusContent")
 public class StatusContent implements Serializable {
 ...
 }
 
-// 必须配置
+// 配置主键（必须）
 @PrimaryKey(column = "id")
 private long id;
 
@@ -59,22 +58,20 @@ private long id;
 
 
 ## API
+
+ * Insert方法
  
- * insert(Extra extra, T... entities)
+  * insert(Extra extra, T... entities)
 
-   根据一个数组存库，如果某实体已存在，则忽略该实体的存库
+>根据一个数组存库，如果某实体已存在，则忽略该实体的存库
 
- * insertOrReplace(Extra extra, T... entities)
+  * insertOrReplace(Extra extra, T... entities)
 
-   根据一个数组存库，如果某实体已存在，则使用新的实体更新DB数据
+>根据一个数组存库，如果某实体已存在，则使用新的实体更新DB数据
 
- * insert(Extra extra, List<T> entityList)
+  * insert(Extra extra, List<T> entityList)
 
-   同上
-
- * insertOrReplace(Extra extra, List<T> entityList)
-
-   同上
+  * insertOrReplace(Extra extra, List<T> entityList)
 
  * insert(Extra extra, T... entities)
 
