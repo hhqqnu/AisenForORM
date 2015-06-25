@@ -1,0 +1,18 @@
+<manifest package="org.aisen.orm.sample"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 在SDCard中创建与删除文件权限 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <!-- <uses-permission android:name="android.permission.WRITE_GSERVICES"/> -->
+    <!-- 往SDCard写入数据权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <!--加载被测主程序包名 -->
+    <instrumentation android:name="android.test.InstrumentationTestRunner" android:targetPackage="org.aisen.orm.sample"/>
+
+    <application android:allowBackup="true">
+        <!--需要加载测试扩展包 -->
+        <uses-library android:name="android.test.runner"/>
+    </application>
+
+</manifest>
